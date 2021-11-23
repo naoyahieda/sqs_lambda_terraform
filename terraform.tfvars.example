@@ -1,0 +1,4 @@
+service_name = "asyncapitest"
+
+output_path = "asyncoutputpath"
+SLACK_API_KEY = "これは適当！！！"

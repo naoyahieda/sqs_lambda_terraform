@@ -1,15 +1,15 @@
 import json
 import os
+import time
 
 def lambda_handler(event, context):
     records = event["Records"]
     
     for record in records:
         message = record["body"]
-        print(str(message)) # ここで処理
-    
-    # 環境変数を出力してみる
-    print(os.environ.get("SLACK_API_KEY"))
+        print(message) # ここで処理
+        print('wow')
+        time.sleep(10)
     
     return {
         'statusCode': 200,

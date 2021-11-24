@@ -46,6 +46,8 @@ resource "aws_lambda_function" "default" {
   handler          = "lambda_function.lambda_handler"
   source_code_hash = data.archive_file.default.output_base64sha256
   runtime          = "python3.8"
+  timeout = 900
+  description = "ADPOSの非同期処理をする関数"
   depends_on = [
     null_resource.main
   ]

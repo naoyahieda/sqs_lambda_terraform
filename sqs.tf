@@ -2,6 +2,7 @@ resource "aws_sqs_queue" "default" {
   name                        = "${var.service_name}.fifo"
   fifo_queue                  = true
   content_based_deduplication = true
+  visibility_timeout_seconds = 901
 }
 
 resource "aws_lambda_event_source_mapping" "default" {
